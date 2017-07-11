@@ -12,6 +12,7 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.IEntityLivingData;
 import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -21,7 +22,7 @@ public class KashSpawnsMobEvent {
 	public void onMobKilled(LivingDeathEvent event) {
 		if (event.getEntity() instanceof EntityLivingBase && event.getEntity().isNonBoss()) {
 			EntityLivingBase entity = (EntityLivingBase) event.getEntity();
-			World world = entity.worldObj;
+			World world = entity.getEntityWorld();
 			if (!world.isRemote) {
 				if(ConfigHandler.PLAYER_ONLY_SPAWNS && !(event.getSource().getEntity() instanceof EntityPlayer))
 					return;
@@ -58,12 +59,12 @@ public class KashSpawnsMobEvent {
 	private void spawnMobfromList(World world, EntityLivingBase originalEntity, String entityName) {
 		if (!world.isRemote) {
 			Entity entity = null;
-			entity = EntityList.createEntityByName(entityName, world);
+			entity = EntityList.createEntityByIDFromName(new ResourceLocation(entityName), world);
 			if (entity != null && entity instanceof EntityLivingBase) {
 				EntityLiving entityliving = (EntityLiving) entity;
 				entity.copyLocationAndAnglesFrom(originalEntity);
 				entityliving.onInitialSpawn(world.getDifficultyForLocation(entity.getPosition()), (IEntityLivingData) null);
-				world.spawnEntityInWorld(entity);
+				world.spawnEntity(entity);
 				entityliving.playLivingSound();
 			}
 		}

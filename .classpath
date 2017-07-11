@@ -2,7 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="src" path="src/main/resources"/>
-	<classpathentry kind="lib" path="C:/Users/Dave/.gradle/caches/minecraft/net/minecraftforge/forge/1.10.2-12.18.3.2185/snapshot/20161111/forgeSrc-1.10.2-12.18.3.2185.jar" sourcepath="C:/Users/Dave/.gradle/caches/minecraft/net/minecraftforge/forge/1.10.2-12.18.3.2185/snapshot/20161111/forgeSrc-1.10.2-12.18.3.2185-sources.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/Dave/.gradle/caches/minecraft/net/minecraftforge/forge/1.11.2-13.20.1.2388/snapshot/20161220/forgeSrc-1.11.2-13.20.1.2388.jar" sourcepath="C:/Users/Dave/.gradle/caches/minecraft/net/minecraftforge/forge/1.11.2-13.20.1.2388/snapshot/20161220/forgeSrc-1.11.2-13.20.1.2388-sources.jar"/>
 	<classpathentry kind="output" path="build/classes/main"/>
 </classpath>
