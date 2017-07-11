@@ -1,0 +1,20 @@
+[
+{
+  "modid": "kash_spawns",
+  "name": "kash_spawns",
+  "description": "Spawn Mod For Kash.",
+  "version": "0.1.1",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [
+    "vadis365, Kashdeya"
+  ],
+  "credits": "Made because it is.",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]
