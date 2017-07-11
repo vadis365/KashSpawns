@@ -10,7 +10,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = "kash_spawns", name = "kash_spawns", version = "0.1.1", guiFactory = "kash_spawns.configs.ConfigGuiFactory", dependencies = "after:*")
+@Mod(modid = "kash_spawns", name = "kash_spawns", version = "0.3.0", guiFactory = "kash_spawns.configs.ConfigGuiFactory", dependencies = "after:*")
 
 public class KashSpawns {
 
