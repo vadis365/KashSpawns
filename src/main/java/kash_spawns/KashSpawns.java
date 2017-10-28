@@ -1,6 +1,7 @@
 package kash_spawns;
 
 import kash_spawns.configs.ConfigHandler;
+import kash_spawns.events.EntityAddAttackEvent;
 import kash_spawns.events.KashSpawnsMobEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -30,5 +31,6 @@ public class KashSpawns {
 	@EventHandler
 	public void posInit(FMLPostInitializationEvent event) {
 		MinecraftForge.EVENT_BUS.register(new KashSpawnsMobEvent());
+		MinecraftForge.EVENT_BUS.register(new EntityAddAttackEvent());
 	}
 }
